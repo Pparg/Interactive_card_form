@@ -3,7 +3,7 @@ body{
   margin:0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 .desktop_main_container{
   width: 100vw;
@@ -24,6 +24,7 @@ font-family: 'Space Grotesk', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 350px;
 
 }
 /* Card styling*/
@@ -85,7 +86,7 @@ font-family: 'Space Grotesk', sans-serif;
 }
 p{
   color:hsl(0,0%,100%);
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 1.1rem, 1.2rem);
 }
 .card_back{
   display: flex;
@@ -129,7 +130,7 @@ form{
 label{
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.1rem,1.2rem);
   height: 90px;
 }
 .special_label{
@@ -150,7 +151,7 @@ label{
   border-radius: 10px;
   border: 1px solid hsl(270, 3%, 87%);
   padding-left: 10px ;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem,1rem,1.2rem);
   margin-top: 7px;
   color: hsl(279, 6%, 55%)
 }
@@ -179,7 +180,7 @@ button{
   color:hsl(0,0%,100%);
   border:1px solid;
   height: 40px;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem , 1.1rem, 1.2rem);
   border-radius: 10px;
 }
 button:active{
@@ -221,17 +222,15 @@ button:active{
   width: 80%;
   height: 40%;
   margin-top: 20px;
-  margin-bottom: 30px;
 }
 .card_container_mobile .card_back, .card_container_mobile .card_front{
-  width: 80%;
+  width: 70%;
   height: 50%;
 }
 .card_container_mobile .card_front{
   position: relative;
   z-index: 1;
   top: -15%;
-  height: fit-content;
 }
 .mobile_main_container .form_container{
   margin-top: 0;
@@ -240,7 +239,7 @@ button:active{
   width: 100%;
 }
 .card_container_mobile p{
-  font-size: 1rem;
+  font-size: clamp(0.8rem,1rem,1.2rem);
 }
 .mobile_main_container .open{
   width: 80%;
@@ -252,4 +251,16 @@ button:active{
 }
 .mobile_main_container .special_label_input_last input{
   width: 100%;
+}
+
+@media screen and (350px<width<420px) {
+  .card_container_mobile .big_circle{
+    width: 40px;
+    height: 40px;
+  }
+  .card_container_mobile p {
+    font-size: 0.8rem;
+    margin : 2px;
+  }
+  
 }
