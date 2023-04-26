@@ -253,7 +253,7 @@ button:active{
   width: 100%;
 }
 
-@media screen and (350px<width<420px) {
+@media screen and (width<420px) {
   .card_container_mobile .big_circle{
     width: 40px;
     height: 40px;
